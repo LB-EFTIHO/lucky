@@ -36,15 +36,26 @@
             position: absolute;
             bottom: 0;
         }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.1;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>오늘의 운세 확인하기기</h1>
+    </header>
     <p><b>25%</b> 좋지 못한 행운<br>
         <b>18%</b> 평범한 행운<br>
         <b>15%</b> 말길<br>
         <b>13%</b> 기분 좋게 하루를 보낼수 있는 자<br>
         <b>7%</b> 흉<br>
         <b>7%</b> 행운이 따를수 있는 자<br>
+        <b>0.6179639223%</b> 귀찮음을 뚫은 행운을 얻은 자<br>
         <b>5%</b> 좋은 하루를 보낼수 있는 자<br>
         <b>3%</b> 대흉<br>
         <b>2%</b> 성공 할수있는 하루<br>
@@ -57,13 +68,13 @@
         <b>0.2%</b> 주장낙토<br>
         <b>0.1%</b> 불행을 가진 자<br>
         <b>0.1%</b> 우연의 반복은 필연이다<br>
+        <b>0.091003%</b> 錦衣還鄕<br>
+        <b>0.091003%</b> 衣錦之榮<br>
         <b>0.00003%</b> 볼수 없는 행운을 얻은 자<br>
         <b>0.00000000444%</b> 4<br>
         <b>0.000000328912%</b> 좋은 하루 보내시기를 바랍니다.<br>
-        <b>0.091003%</b> 錦衣還鄕<br>
-        <b>0.091003%</b> 衣錦之榮<br>
-        <b>0.0000000777%</b> 말로 이룰수 없는 행운을 얻은 자<br>
-        <b>0.6179639223%</b> 귀찮음을 뚫은 행운을 얻은 자<br></p><!--노가다는 역시 대 챗지피티-->
+        <b>0.0000000777%</b> 말로 이룰수 없는 행운을 얻은 자<br></p>
+        <!--노가다는 역시 대 챗지피티-->
     <div class="button-container">
         <button class   ="button" onclick="showMessage('결과 : ')">오늘의 운세 확인하기</   button>
     </div>
@@ -79,6 +90,7 @@
                 { chance: 13, message: "기분 좋게 하루를 보낼수 있는 자" },
                 { chance: 7, message: "흉" },
                 { chance: 7, message: "행운이 따를수 있는 자" },
+                { chance: 0.6179639223, message: "귀찮음을 뚫은 행운을 얻은 자" },
                 { chance: 5, message: "좋은 하루를 보낼수 있는 자" },
                 { chance: 3, message: "대흉" },
                 { chance: 2, message: "성공 할수있는 하루" },
@@ -91,13 +103,12 @@
                 { chance: 0.2, message: "주장낙토" },
                 { chance: 0.1, message: "불행을 가진 자" },
                 { chance: 0.1, message: "우연의 반복은 필연이다" },
+                { chance: 0.091003, message: "錦衣還鄕" },
+                { chance: 0.091003, message: "衣錦之榮" },
                 { chance: 0.00003, message: "볼수 없는 행운을 얻은 자" },
                 { chance: 0.00000000444, message: "4" },
                 { chance: 0.000000328912, message: "좋은 하루 보내시기를 바랍니다." },
-                { chance: 0.091003, message: "錦衣還鄕" },
-                { chance: 0.091003, message: "衣錦之榮" },
                 { chance: 0.0000000777, message: "말로 이룰수 없는 행운을 얻은 자" },
-                { chance: 0.6179639223, message: "귀찮음을 뚫은 행운을 얻은 자" }
             ];
     
             const totalChance = fortunes.reduce((sum, fortune) => sum + fortune.chance, 0);
