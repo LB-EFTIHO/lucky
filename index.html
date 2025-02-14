@@ -50,8 +50,49 @@
     </div>
     <script>
         function showMessage(name) {
-            alert(name + "최고");
+            const fortunes = [
+                { chance: 25, message: "평범한 행운" },
+                { chance: 18, message: "좋지 못한 행운" },
+                { chance: 15, message: "말길" },
+                { chance: 13, message: "기분 좋게 하루를 보낼수 있는 자" },
+                { chance: 7, message: "흉" },
+                { chance: 7, message: "행운이 따를수 있는 자" },
+                { chance: 5, message: "좋은 하루를 보낼수 있는 자" },
+                { chance: 3, message: "대흉" },
+                { chance: 2, message: "성공 할수있는 하루" },
+                { chance: 1, message: "단 1% 의 가능성을 진취한 자" },
+                { chance: 1, message: "단 1% 를 보았던 자" },
+                { chance: 0.2, message: "우연지사" },
+                { chance: 0.2, message: "무망지복" },
+                { chance: 0.2, message: "천리일도" },
+                { chance: 0.2, message: "사공중곡" },
+                { chance: 0.2, message: "주장낙토" },
+                { chance: 0.1, message: "불행을 가진 자" },
+                { chance: 0.1, message: "우연의 반복은 필연이다" },
+                { chance: 0.00003, message: "볼수 없는 행운을 얻은 자" },
+                { chance: 0.00000000444, message: "4" },
+                { chance: 0.000000328912, message: "좋은 하루 보내시기를 바랍니다." },
+                { chance: 0.091003, message: "錦衣還鄕" },
+                { chance: 0.091003, message: "衣錦之榮" },
+                { chance: 0.0000000777, message: "말로 이룰수 없는 행운을 얻은 자" },
+                { chance: 0.6179639223, message: "귀찮음을 뚫은 행운을 얻은 자" }
+            ];
+    
+            const totalChance = fortunes.reduce((sum, fortune) => sum + fortune.chance, 0);
+            let random = Math.random() * totalChance;
+            for (let i = 0; i < fortunes.length; i++) {
+                if (random < fortunes[i].chance) {
+                    alert(name + fortunes[i].message);
+                    return;
+                }
+                random -= fortunes[i].chance;
+            }
         }
     </script>
+    <!--<script>
+        function showMessage(name) {
+            alert(name + "최고");
+        }
+    </script>-->
 </body>
 </html>
