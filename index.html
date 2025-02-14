@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오늘의 운세 확인하기</title>
     <style>
+        header {
+            background-color: #efea94;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+        }
         body {
             background-color: white;
             display: flex;
@@ -17,11 +27,20 @@
             padding: 10px 20px;
             font-size: 16px;
         }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
-    <p><b>25%</b> 평범한 행운<br>
-        <b>18%</b> 좋지 못한 행운<br>
+    <p><b>25%</b> 좋지 못한 행운<br>
+        <b>18%</b> 평범한 행운<br>
         <b>15%</b> 말길<br>
         <b>13%</b> 기분 좋게 하루를 보낼수 있는 자<br>
         <b>7%</b> 흉<br>
@@ -44,15 +63,18 @@
         <b>0.091003%</b> 錦衣還鄕<br>
         <b>0.091003%</b> 衣錦之榮<br>
         <b>0.0000000777%</b> 말로 이룰수 없는 행운을 얻은 자<br>
-        <b>0.6179639223%</b> 귀찮음을 뚫은 행운을 얻은 자<br></p>
+        <b>0.6179639223%</b> 귀찮음을 뚫은 행운을 얻은 자<br></p><!--노가다는 역시 대 챗지피티-->
     <div class="button-container">
-        <button class   ="button" onclick="showMessage('결과 : ')">오늘의 운세 확인하기</button>
+        <button class   ="button" onclick="showMessage('결과 : ')">오늘의 운세 확인하기</   button>
     </div>
+    <footer>
+        <p>&copy; 수정/추가 사항은 디코나 카톡으로 남겨주시면 됩니다. </p>
+    </footer>
     <script>
         function showMessage(name) {
             const fortunes = [
-                { chance: 25, message: "평범한 행운" },
-                { chance: 18, message: "좋지 못한 행운" },
+                { chance: 25, message: "좋지 못한 행운" },
+                { chance: 18, message: "평범한 행운" },
                 { chance: 15, message: "말길" },
                 { chance: 13, message: "기분 좋게 하루를 보낼수 있는 자" },
                 { chance: 7, message: "흉" },
