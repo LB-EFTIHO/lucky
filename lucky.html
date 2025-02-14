@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 운세 확인하기</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class   ="button" onclick="showMessage('변수')">오늘의 운세 확인하기</button>
+    </div>
+    <script>
+        function showMessage(name) {
+            alert(name + "오늘의 운세는 최고입니다.");
+        }
+    </script>
+</body>
+</html>
